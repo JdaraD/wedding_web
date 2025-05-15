@@ -94,3 +94,13 @@ $(document).on("click", '[data-toggle="lightbox"]', function(event) {
   event.preventDefault();
   $(this).ekkoLightbox();
 });
+
+  const btn = document.getElementById('mute-btn');
+  const audio = document.getElementById('bg-music');
+
+  btn.addEventListener('click', () => {
+    audio.muted = !audio.muted;
+    btn.textContent = audio.muted ? '🔇' : '🔊';
+  });
+
+  
