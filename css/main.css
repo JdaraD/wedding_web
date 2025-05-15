@@ -34,15 +34,28 @@ body {
       @media (max-width: 576px) {
         .ww-home-page .ww-wedding-announcement .ww-couple-name {
           font-size: 50px; } }
-          
+
 .text-border {
   display: inline-block;
-  padding: 20px 40px;
-  border: 3px solid rgba(255, 255, 255, 0.3); /* Transparan putih */
-  border-radius: 20px;
-  backdrop-filter: blur(2px); /* Opsional: efek blur */
-  -webkit-backdrop-filter: blur(2px); /* Safari support */
+  padding: 1rem 2rem; /* lebih fleksibel */
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-radius: 1.25rem;
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
   margin: 0 auto;
+  max-width: 90%;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+/* Responsive adjustments untuk layar kecil */
+@media (max-width: 600px) {
+  .text-border {
+    padding: 0.5rem 1rem;
+    border-radius: 0.75rem;
+    font-size: 0.8rem;
+    border-width: 2px;
+  }
 }
 
 .ww-home-page::before {
@@ -107,7 +120,7 @@ body {
   padding-left: 0; }
 
 /* Couple Friends Style  */
-.ww-couple-friends .carousel {
+/* .ww-couple-friends .carousel {
   padding: 40px 0; }
 
 .ww-couple-friends .carousel-indicators {
@@ -115,7 +128,50 @@ body {
   .ww-couple-friends .carousel-indicators li {
     background-color: #6c757d; }
   .ww-couple-friends .carousel-indicators .active {
-    background-color: #f58a77; }
+    background-color: #f58a77; } */
+
+.border-gift-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  width: 100%;
+  text-align: center;
+}
+
+.border-gift-container .gift-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  width: 100%;
+  max-width: 500px;
+  border: 1px solid #6e6766;
+  background-color: rgba(228, 228, 228, 0.2);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  border-radius: 10px;
+}
+
+.border-gift-container .gift-container img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Responsif untuk mobile */
+@media (max-width: 600px) {
+  .border-gift-container .gift-container {
+    padding: 15px;
+  }
+
+  .border-gift-container .gift-container img {
+    max-width: 300px;
+  }
+}
+
 
 /* Photo Gallery Style */
 .ww-photo-gallery .ww-category-filter a {
