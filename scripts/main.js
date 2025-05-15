@@ -95,12 +95,11 @@ $(document).on("click", '[data-toggle="lightbox"]', function(event) {
   $(this).ekkoLightbox();
 });
 
-  const btn = document.getElementById('mute-btn');
-  const audio = document.getElementById('bg-music');
+const video = document.getElementById("bgVideo");
+const button = document.getElementById("muteButton");
 
-  btn.addEventListener('click', () => {
-    audio.muted = !audio.muted;
-    btn.textContent = audio.muted ? '🔇' : '🔊';
-  });
+button.addEventListener("click", () => {
+  video.muted = !video.muted;
+  button.textContent = video.muted ? "🔇" : "🔊";
+});
 
-  
