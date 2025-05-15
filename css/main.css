@@ -192,13 +192,13 @@ body {
 
 @media (max-width: 992px) {
   .ww-photo-gallery .card-columns {
-    -moz-column-count: 2;
-         column-count: 2; } }
+    -moz-column-count: 3;
+         column-count: 3; } }
 
 @media (max-width: 576px) {
   .ww-photo-gallery .card-columns {
-    -moz-column-count: 1;
-         column-count: 1; } }
+    -moz-column-count: 3;
+         column-count: 3; } }
 
 /* RSVP Style */
 .ww-rsvp-detail {
@@ -253,7 +253,7 @@ body {
   cursor: pointer;
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
   transition: background-color 0.3s ease;
-  z-index: 1000;
+  z-index: 50;
 }
 
 .mute-button:hover {
