@@ -95,11 +95,23 @@ $(document).on("click", '[data-toggle="lightbox"]', function(event) {
   $(this).ekkoLightbox();
 });
 
-const video = document.getElementById("bgVideo");
-const button = document.getElementById("muteButton");
+  const video = document.getElementById("bgVideo");
+  const button = document.getElementById("muteButton");
 
-button.addEventListener("click", () => {
-  video.muted = !video.muted;
+  // Atur ikon tombol saat halaman dimuat
   button.textContent = video.muted ? "🔇" : "🔊";
-});
 
+  button.addEventListener("click", () => {
+    video.muted = !video.muted;
+    button.textContent = video.muted ? "🔇" : "🔊";
+  });
+
+  if (sessionStorage.getItem("reloaded")) {
+    sessionStorage.removeItem("reloaded");
+    window.location.href = "index.html";
+  }
+
+  // Simpan flag sebelum reload
+  window.addEventListener("beforeunload", () => {
+    sessionStorage.setItem("reloaded", "true");
+  });

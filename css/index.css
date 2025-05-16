@@ -1,0 +1,156 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Dosis", sans-serif;
+}
+
+.container {
+    background: url("../images/Batak.jpg") no-repeat center center;
+    background-size: cover;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 10;
+    overflow: hidden;
+}
+
+.container-content {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+}
+
+.container-content-img {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.container-content-img img {
+    width: 100%;
+    max-width: 520px;
+    height: auto;
+    border-radius: 5px;
+    border: 3px solid white;
+    z-index: 30;
+    position: relative;
+}
+
+.container-box {
+    background-color: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 300px;
+    padding: 20px 15px;
+    position: absolute;
+    z-index: 40;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.container-box .invitation-text p {
+    font-family: 'Dosis', sans-serif;
+    margin: 4px 0;
+    color: white;
+    font-size: 16px;
+}
+
+.container-box .invitation-text .nama-tamu {
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.container-box button {
+    margin-top: 15px;
+    background-color: #bba16a;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: capitalize;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.container-box button:hover {
+    background-color: #a99050;
+    transform: scale(1.05);
+}
+
+.wedding-title {
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    text-align: center;
+    z-index: 35;
+    color: #000000;
+    width: 100%;
+    padding: 0 10px;
+}
+
+.wedding-title .subtitle {
+    font-size: 14px;
+    font-family: 'Dosis', sans-serif;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.wedding-title .couple-names {
+    font-size: 32px;
+    font-family: 'Great Vibes', cursive;
+    margin: 5px 0 0;
+    color: rgb(12, 12, 12);
+}
+
+/* 🔽 Tambahkan Media Queries untuk Mobile */
+@media (max-width: 600px) {
+    .container-box .invitation-text p {
+        font-size: 14px;
+    }
+
+    .container-box .invitation-text .nama-tamu {
+        font-size: 18px;
+    }
+
+    .container-box button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    .wedding-title .couple-names {
+        font-size: 28px;
+    }
+
+    .wedding-title {
+        top: 8%;
+    }
+
+    .container {
+        align-items: flex-start;
+        padding-top: 60px;
+    }
+
+    .container-box {
+        top: auto;
+        bottom: -40px;
+    }
+}
