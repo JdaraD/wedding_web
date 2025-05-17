@@ -3,7 +3,7 @@ body {
 
 /* Home Page Style */
 .ww-home-page {
-  background: url("../images/Batak.jpg") no-repeat center center;
+  background: url("../images/bb1.jpg") no-repeat center center;
   background-size: cover;
   background-position: 50%;
   height: 100vh;
@@ -85,6 +85,10 @@ body {
   top: 0; } */
 
 /* Nav Bar Style */
+.ww-nav-bar .navbar {
+  background-color: #ac7829;
+}
+
 .ww-nav-bar .heart {
   fill: #f26147;
   position: relative;
@@ -378,4 +382,8 @@ video#bgVideo {
   background-color: rgba(0, 0, 0, 0.4);
   border-radius: inherit;
   z-index: -1;
+}
+
+.ww-footer {
+  background-color: #ac7829;
 }
